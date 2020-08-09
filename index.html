@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>HUANA Wedding</title>
+	
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../dist/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<style>
+    
+#loading{
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  margin-top: 0px;
+  top: 0px;
+  z-index: 9999999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#loading-center{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#loading-center-absolute {
+  position: absolute;
+  left: 42.5%;
+    top: 50%;
+    height: 4em;
+    width: 13em;
+  margin-top: -25px;
+  margin-left: -28px;
+  transform: scale(2.5);
+}
+
+    @font-face {
+  font-family: myFirstFont;
+  src: url(	Digi-invite/Fonts/parisienne/Parisienne-Regular.ttf);
+}
+@font-face {
+  font-family: mysecondFont;
+  src: url(	Digi-invite/Fonts/Gotham/GothamBook.ttf);
+}
+  #section1{ 
+		/* background-image: url(Digi-invite/Assets/Assets-06.svg);
+		padding: 6% 0 0 0;
+		background-size: 100% 100%;
+    background-repeat: no-repeat;  */
+    opacity: 0;
+    transition: all 2s ease;
+	}
+  #section3{
+    /* background-image: url(Digi-invite/Assets/Assets-15.svg); */
+		padding: 6% 0 0 0;
+		background-size: 100% 40%;
+    background-repeat: no-repeat; 
+	}
+  .button {
+  background-color: #8d183d; /* Green */
+  border: none;
+  color: white;
+  padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2em;
+}
+  /*#section2{
+		background-image: url(Digi-invite/Assets/Assets-08.svg);
+		padding: 6% 0 0 0;
+		background-size: 44% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+	} */
+		#section2 .intro{
+			opacity: 0;
+			position:relative;
+      transition: all 2s ease;
+		}
+    #section3 .intro, #section4 .intro{
+			opacity: 0;
+			position:relative;
+      transition: all 2s ease;
+		}
+    .card{
+      background-image: url(Digi-invite/Assets/Assets-13.svg);
+      background-size: 100%;
+    background-repeat: no-repeat; 
+    }
+
+    /**
+    * Here we fire the animation for section 3.
+    * As the fp-viewing class in the body changes on each section and slide.
+    */
+    body.fp-viewing-3rdPage #section3 .intro{
+			opacity: 1;
+    }
+    body.fp-viewing-2ndPage #section2 .intro{
+       opacity : 1       
+    }
+    body.fp-viewing-1stPage #section1{ 
+      opacity : 1
+    }
+    body.fp-viewing-4thpage #section4 .intro{
+      opacity: 1
+    }
+
+    
+	h1{
+		font-size: 7em;
+		font-family: myFirstFont,helvetica;
+		color: #000;
+		margin:0;
+		padding:0;
+	}
+	h2{
+		font-size: 5em;
+		font-family: myFirstFont,helvetica;
+		color: #000;
+		margin:0;
+		padding:0;
+	}
+	h3{
+		font-size: 2em;
+		font-family: mysecondFont,helvetica;
+		color: #000;
+		margin:0;
+		padding:0;
+	}
+  .tet{
+    padding: 2em 3em;
+    font-size: 2.5em;
+
+  }
+  h1,h2,h3{
+      color:#af1e4a !important;
+    }
+    #section4 .fp-tableCell{
+      vertical-align: top;
+    }
+  </style>
+    <meta property="og:title" content="HUANA Wedding" />
+    <meta property="og:description" content="Humseeini and Anand are getting married this application helps to remind & locate you for their celebration">
+        <meta property="og:image" content="https://anandhumisni.github.io/Digi-invite/Assets/Assets-07.svg">
+           <div id='hidden' style='display:none;'><img src="https://subashpavithra.github.io/Digi-invite/Assets/Assets-07.svg"></div>
+<
+</head>
+<body>
+
+	<div id="loading">
+		<div id="loading-center">
+	<div id="loading-center-absolute">
+    <img src="Digi-invite/Assets/Assets-07.svg" style="
+    height: 4em;
+    width: 13em;
+						" alt="">
+						</div>
+		</div>
+</div>
+<div id="fullpage">
+  <div class="section" id="section1">
+      <img src="Digi-invite/Assets/Assets-06.svg" style="
+      height:100%;
+      width:100%
+
+" alt="">
+	</div>
+	<div class="section" id="section2">
+      <div class="intro">
+          <br> 
+          <canvas id="canv" width="600" height="350"></canvas> 
+
+          <br> 
+          <img src="Digi-invite/Assets/Assets-08.svg" style="
+          height: 22em;
+          width: 21em;
+          margin-top: -9em;
+      " alt="">
+
+        <h2>Humseeini <br>&<br> Anandraj</h2>
+        <br> 
+        <br> 
+  
+        <h3>ARE GETTING MARRIED <br><br>
+        ON
+        </h3>`
+        <img src="Digi-invite/Assets/Assets-10.svg" style="
+        width: 100%;
+    " alt="">
+            <h3 style="
+            font-size: 3em;
+            line-height: 3em;
+        ">21ST AUGUST 2020 </h3>
+        <img src="Digi-invite/Assets/Assets-09.svg" style="
+        width: 100%;
+    " alt="">
+    <br>
+    <br>
+  <!-- <a href="#" class="button">ADD TO CALENDER</a> -->
+  <div title="Add to Calendar" class="addeventatc button" data-direct="google" data-styling="none">
+    Add to Calendar
+    <span class="start">07/11/2020 06:00 PM</span>
+    <span class="end">07/12/2020  11:00 AM</span>
+    <span class="timezone">India</span>
+    <span class="title">Subash & Pavithra wedding</span>
+    <span class="description">Hey, You are invited to our wedding get celebrated</span>
+    <span class="location"></span>
+    <span class="alarm_reminder">1440</span>
+</div>
+      </div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+        <img src="Digi-invite/Assets/Asset-with-copy-14.svg" style="
+        width: 100%;
+    " alt="">
+      <h3 class="tet">AND WE'D BE PLEASED IF YOU 
+        <span style="
+        padding-top: 15px;
+        display: block;
+        ">JOIN US WHEN WE TIE THE KNOT</span> </h3>
+      <img src="Digi-invite/Assets/Assets-12.svg" style="
+      width: 100%;
+      transform: scale(.5);
+  " alt="">
+      <h3 class="tet">FOLLOW OUR INSTAGRAM PAGE <span style="
+        padding-top: 15px;
+        display: block;
+        ">NOW TO GET NOTIFIED ABOUT</span><span style="
+        padding-top: 15px;
+        display: block;
+        ">OUR LIVE!</span> </h3>
+<a href="#" class="button">FOLLOW US</a>
+<img src="Digi-invite/Assets/Assets-time-12.svg" style="
+width: 100%;
+transform: scale(.75);
+" alt="">
+		</div>
+  </div>
+  <div class="section" id="section4">
+      <div class="intro">
+          <img src="Digi-invite/Assets/Assets-14.svg" style="
+          width: 100%;
+      " alt="">
+        <h3 class="tet">WE DEEPLY REGRET NOT HAVING  
+          <span style="
+          padding-top: 15px;
+          display: block;
+          ">INVITED YOU ALL PERSONALLY,</span> 
+          <span style="
+          padding-top: 15px;
+          display: block;
+          ">
+              BUT YOUR SAFETY IS OUR TOP
+          </span>
+        <span style="
+        padding-top: 15px;
+        display: block;
+        ">
+            PRIORITY.
+        </span></h3>
+        <img src="Digi-invite/Assets/Assets-12.svg" style="
+        width: 100%;
+        transform: scale(.5);
+    " alt="">
+        <h3 class="tet">DUE TO THE CURRENT HEALTH<span style="
+          padding-top: 15px;
+          display: block;
+          ">THREATS, YOUR PRESENCE MAY</span><span style="
+          padding-top: 15px;
+          display: block;
+          ">NOT BE POSSIBLE BUT YOUR LOVE</span>
+          <span style="
+          padding-top: 15px;
+          display: block;
+          ">
+              AND BLESSINGS IS ALL WE NEED.
+          </span> </h3>
+          <h3 class="tet">SO SEND US YOUR PERSONAL <span style="
+            padding-top: 15px;
+            display: block;
+            ">MESSAGES HERE:</span></h3>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8-8B3AtMMC24cTnpMkqtc9vIA60DWlrMlQhVAb-tn-OOKjQ/viewform?embedded=true" width="640" height="677" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+	
+</div>
+
+<script type="text/javascript" src="../dist/fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['1stPage', '2ndPage', '3rdPage', '4thpage', 'lastPage'],
+        menu: '#menu',
+        afterLoad: function(origin, destination, direction){
+            //section 2
+            // if(destination.index == 1){
+            //     // document.querySelector('#section2').querySelector('img').style.dis = 0 + 'px';
+            //     document.querySelector('#section2').querySelector('.intro').style.opacity = 1;
+            // }
+
+            // //back to original state
+            // else if(origin && origin.index == 1){
+            //     // document.querySelector('#section2').querySelector('img').style.left = 130 + '%';
+            //     document.querySelector('#section2').querySelector('.intro').style.opacity = 0;
+            // }
+
+            //section 3 is using the state classes to fire the animation
+            //see the CSS code above!
+        }
+    });
+    window.onload = function () { 
+  
+  /* This method returns the html element that 
+      has the ID attribute with the specified 
+      value. */
+  let canvas = document.getElementById("canv"); 
+
+  /* This method returns a drawing context 
+      on the canvas, or null if the context 
+      identified is not supported. */
+  let context = canvas.getContext("2d"); 
+
+  /* It will change the style and appearance  
+      of the text to make it look more geeky. */
+  context.font = "7em myFirstFont"; 
+  context.fillStyle = "#f1615a"; 
+  context.textAlign = "center"; 
+
+  let string = "Save the date";
+
+  let angle = Math.PI * 0.6; // in radians 
+  let radius = 300; 
+
+
+  context.translate(300, 400); 
+  context.rotate(-1 * angle / 2); 
+
+  for (let i = 0; i < string.length; i++) { 
+
+      /* It is worth noting that we are not 
+          rotating the text,here the whole 
+          context is being rotated and 
+          translated, and the letters are just 
+          filled in it. */
+      context.rotate(angle / string.length); 
+      context.save(); 
+      context.translate(0, -1 * radius); 
+      context.fillText(string[i], 0, 0); 
+      context.restore(); 
+  } 
+}; 
+$(document).ready(function() {
+  $("#loading").fadeOut(500);
+});
+</script>
+
+</body>
+</html>
