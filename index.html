@@ -75,7 +75,7 @@
     background-repeat: no-repeat;
     background-position: center;
 	} */
-		/*#section1 .intro{
+		#section1 .intro{
 			opacity: 0;
 			position:relative;
       transition: all 2s ease;
@@ -84,7 +84,7 @@
 			opacity: 0;
 			position:relative;
       transition: all 2s ease;
-		}*/
+		}
     .card{
       background-image: url(Digi-invite/Assets/Assets-13.svg);
       background-size: 100%;
@@ -251,7 +251,26 @@ transform: scale(.75);
 <script type="text/javascript" src="../dist/fullpage.js"></script>
 <script type="text/javascript" src="examples.js"></script>
 <script type="text/javascript">
-   
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['1stPage', '2ndPage', '3rdPage', '4thpage', 'lastPage'],
+        menu: '#menu',
+        afterLoad: function(origin, destination, direction){
+            //section 2
+            // if(destination.index == 1){
+            //     // document.querySelector('#section2').querySelector('img').style.dis = 0 + 'px';
+            //     document.querySelector('#section2').querySelector('.intro').style.opacity = 1;
+            // }
+
+            // //back to original state
+            // else if(origin && origin.index == 1){
+            //     // document.querySelector('#section2').querySelector('img').style.left = 130 + '%';
+            //     document.querySelector('#section2').querySelector('.intro').style.opacity = 0;
+            // }
+
+            //section 3 is using the state classes to fire the animation
+            //see the CSS code above!
+        }
+    });
     window.onload = function () { 
   
   /* This method returns the html element that 
@@ -300,4 +319,3 @@ setTimeout(function(){  $("#loading").fadeOut(2000); }, 3000);
 </script>
 
 </body>
-</html>
